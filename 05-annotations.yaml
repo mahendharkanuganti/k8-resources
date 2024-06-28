@@ -1,0 +1,19 @@
+kind: Pod
+apiVersion: v1
+metadata:
+  name: annotations
+  labels:
+    course: k8
+    trainer: sivakumar
+
+## labels are mostly used for single word key value pair
+  annotations:
+    kubernetes.io/created-by: 'sivakumar'
+    jenkins.build.url: 'https://jenkins.daws78s.online/expense/job/backend/54'
+
+## Annotations are mostly used for long lenth key value pairs
+
+spec:
+  containers:
+  - name: nginx
+    image: nginx
